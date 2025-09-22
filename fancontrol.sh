@@ -16,15 +16,15 @@ case "$1" in
       echo "fancontrol.py already running"
     else
       echo "Starting fancontrol.py"
-      /home/pi/fancontrol/fancontrol.py &
+      ~/gpio-fancontrol/fancontrol.py &
     fi
     ;;
   stop)
     echo "Stopping fancontrol.py"
-    pkill -f /home/pi/fancontrol/fancontrol.py
+    pkill -f ~/gpio-fancontrol/fancontrol.py
     ;;
   *)
-    echo "Usage: /home/pi/fancontrol/fancontrol.sh {start|stop}"
+    echo "Usage: ~/gpio-fancontrol/fancontrol.sh {start|stop}"
     exit 1
     ;;
 esac
